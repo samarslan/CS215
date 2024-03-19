@@ -2,7 +2,26 @@
 #include <string> 
 using namespace std; 
 
+int binarySearch(const string arr[], int l, int r, const string& x) {
+    while (l <= r) {
+        int mid = l + (r - l) / 2;
 
+        // Check if x is present at mid
+        if (arr[mid] == x)
+            return mid;
+
+        // If x greater, ignore left half
+        if (arr[mid] < x)
+            l = mid + 1;
+
+        // If x is smaller, ignore right half
+        else
+            r = mid - 1;
+    }
+
+    // If we reach here, then the element was not present
+    return -1;
+}
 
 void selectionSort(string arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
