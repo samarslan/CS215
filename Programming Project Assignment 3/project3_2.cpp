@@ -10,7 +10,6 @@ void selectionSort(string arr[], int n) {
                 minIndex = j;
         }
         if (minIndex != i) {
-            // Perform manual swap without using swap function
             string temp = arr[i];
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
