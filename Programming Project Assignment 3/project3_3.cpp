@@ -53,10 +53,14 @@ int main()
 
     selectionSort(names, NUM_NAMES);
 
-    cout << "Sorted names:" << endl;
-    for (int i = 0; i < NUM_NAMES; i++) {
-        cout << names[i] << endl;
-    }
+string searchName = "Holland, Beth";
+    int index = binarySearch(names, 0, NUM_NAMES - 1, searchName);
+
+    // Print the result
+    if (index != -1)
+        cout << "Name found at index: " << index << endl;
+    else
+        cout << "Name not found" << endl;
     
     return 0; 
 } 
