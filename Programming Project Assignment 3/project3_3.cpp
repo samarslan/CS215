@@ -2,7 +2,7 @@
 #include <string> 
 using namespace std; 
 
-int binarySearch(const string arr[], int l, int r, const string& x) {
+int binarySearch(const string arr[], int l, int r, string x) {
     while (l <= r) {
         int mid = l + (r - l) / 2;
 
